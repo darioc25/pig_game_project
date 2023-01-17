@@ -94,7 +94,7 @@ rollDiceBtn.addEventListener("click", () => {
             // Load dice face
             loaderRing.classList.add("hidden");
             diceBackground.classList.remove("hidden");
-            diceFaceImg.src = `/media/dice-${diceRoll}.png`;
+            diceFaceImg.src = `./media/dice-${diceRoll}.png`;
             // Set Score and update UI
             playersCurrentScore[playerActive] += diceRoll;
             document.querySelector(`.player-${playerActive}-current-score`).textContent = playersCurrentScore[playerActive];
