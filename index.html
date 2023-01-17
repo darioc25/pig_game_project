@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Pig Game</title>
+        <!-- Fontawesome Icons-->
+        <script src="https://kit.fontawesome.com/63ec83ee76.js" crossorigin="anonymous"></script>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Start Screen -->
+        <section class="start-screen">
+            <h1 class="main-title">The Pig Game <span class="dice-title">🎲</span></h1>
+            <div class="start-modal">
+                <h3 class="input-title">Enter your name:</h3>
+                <div class="input-area">
+                    <input type="text" placeholder="Player 1" class="player-input" id="player-input-1">
+                    <input type="text" placeholder="Player 2" class="player-input" id="player-input-2">
+                </div>
+                <button class="start-button">Start</button>
+            </div>
+        </section>
+        <!-- Game Screen -->
+        <section class="game-screen hidden">
+            <div class="game-field">
+                <!-- Player 1 -->
+                <div class="player-field player-0 player-active">
+                    <h3 class="player-name player-name-0">Player 1</h3>
+                    <h3 class="total-score player-0-total-score">0</h3>
+                    <div class="current-score-board">
+                        <h3 class="current-score-title">Current Score</h3>
+                        <h3 class="current-score-value player-0-current-score">0</h3>
+                    </div>
+                </div>
+                <!-- Player 2 -->
+                <div class="player-field player-1">
+                    <h3 class="player-name player-name-1"> Player 2</h3>
+                    <h3 class="total-score player-1-total-score">0</h3>
+                    <div class="current-score-board">
+                        <h3 class="current-score-title">Current Score</h3>
+                        <h3 class="current-score-value player-1-current-score">0</h3>
+                    </div>
+                </div>
+                <!-- Dice Section -->
+                <div class="dice-background hidden">
+                    <img src="" class="dice-face">
+                </div>
+                <div class="loader-ring hidden"></div>
+                <!-- Game Buttons -->
+                <button class="custom-btn new-game-btn"><span class="game-icon"><i class="fa-solid fa-plus"></i></span> New Game</button>
+                <button class="custom-btn roll-dice-btn"><span class="game-icon"><i class="fa-solid fa-dice"></i></span> Roll Dice</button>
+                <button class="custom-btn hold-score-btn"><span class="game-icon"><i class="fa-solid fa-hand-holding-hand"></i></span> Hold Score</button>
+            </div>
+        </section>
+
+        <!-- Custom Js -->
+        <script src="script.js"></script>
+    </body>
+</html>
