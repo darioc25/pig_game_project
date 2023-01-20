@@ -5,10 +5,12 @@
 body{
     height: 100vh;
     margin: 0px;
-    min-width: 1200px !important;
+    min-width: 1060px !important;
     padding: 0px;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #560BAD, #7209b7, #b5179e, #f72585);
+    background: linear-gradient(135deg, #f72585, #7209b7, #3a0ca3, #4361ee, #4cc9f0);
+    background-size: 150%;
+    animation: bg-animation 18s infinite;
 }
 
 .start-screen{
@@ -43,7 +45,7 @@ body{
     justify-content: center;
     align-items: center;
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
 }
@@ -110,7 +112,7 @@ body{
     display: flex;
     align-items: center;
     background: rgba(255, 255, 255, 0.3);
-    border-radius: 5px;
+    border-radius: 20px;
     overflow: hidden;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -127,29 +129,21 @@ body{
     transition: all 0.8s;
 }
 
-.player-0{
-    padding: 0px 40px 0px 0px;
-}
-
-.player-1{
-    padding: 0px 0px 0px 40px;
-}
-
 /* Players Board */
 .player-name{
-    font-size: 80px;
+    font-size: 68px;
     margin: 0px;
 }
 
 .total-score{
     font-size: 60px;
-    margin: 0px 0px 180px 0px ;
+    margin: 0px 0px 200px 0px ;
 }
 
 .current-score-board{
-    background-color: rgb(181, 23, 158, 0.6);
+    background-color: rgb(58, 12, 163, 0.35);
     padding: 30px 40px;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -174,13 +168,11 @@ body{
     font-size: 24px;
     border: none;
     cursor: pointer;
-    background-color: transparent;
-    color: white;
-    font-weight: 400;
+    font-weight: 600;
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #480CA8;
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: black;
     transition: 0.4s;
 }
 
@@ -196,19 +188,19 @@ body{
 
 /* Game Buttons */
 .new-game-btn{
-    top: 20px;
+    top: 15px;
     left: 50%;
     transform: translate(-50%, -0%);
 }
 
 .roll-dice-btn{
-    bottom: 120px;
+    bottom: 135px;
     left: 50%;
     transform: translate(-50%, 0%);
 }
 
 .hold-score-btn{
-    bottom: 30px;
+    bottom: 75px;
     left: 50%;
     transform: translate(-50%, 0%);
 }
@@ -216,9 +208,9 @@ body{
 /* Dice Section */
 .dice-background{
     position: absolute;
-    top: 50%;
+    top: 220px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     width: 90px;
     height: 90px;
     display: flex;
@@ -236,19 +228,19 @@ body{
 }
 
 .player-active{
-    background-color: rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .player-winner{
-    background-color: rgb(255, 183, 3, 0.5);
+    background-color: rgb(255, 220, 94, 0.6);
 }
 
 /* Loader Element */
 .loader-ring{
     position: absolute;
-    top: 50%;
+    top: 225px;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     display: inline-block;
     width: 80px;
     height: 80px;
@@ -259,10 +251,11 @@ body{
     display: block;
     width: 64px;
     height: 64px;
+    margin: auto;
     border-radius: 50%;
-    border: 6px solid #fff;
+    border: 8px solid #fff;
     border-color: #fff transparent #fff transparent;
-    animation: loading-animation 1.2s linear infinite;
+    animation: loading-animation 1.5s linear infinite;
 }
 
 /* Custom Animations */
@@ -275,4 +268,10 @@ body{
 @keyframes loading-animation{
     0% {transform: rotate(0deg);}
     100% {transform: rotate(360deg);}
+}
+
+@keyframes bg-animation{
+    0% {background-position: 0%;}
+    50% {background-position: 100%;}
+    100% {background-position: 0%;}
 }

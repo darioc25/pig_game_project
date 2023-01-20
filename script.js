@@ -52,7 +52,7 @@ startBtn.addEventListener("click", () => {
         startScreen.classList.add("hidden");
         gameScreen.classList.remove("hidden");
     } else {
-        alert("Empty field or too long name! (max 8 characters)");
+        alert("Empty field or long name! (max 8 characters)");
     }
 });
 
@@ -75,6 +75,9 @@ newGameBtn.addEventListener("click", () => {
     document.querySelector(`.player-1`).classList.remove("player-winner");
     // Set player active
     document.querySelector(`.player-0`).classList.add("player-active");
+    // Clear input fields
+    playerInput1.value = "";
+    playerInput2.value = "";
     // Change screen
     gameScreen.classList.add("hidden");
     startScreen.classList.remove("hidden");
