@@ -85,16 +85,15 @@ rollDiceBtn.addEventListener("click", () => {
     if(!isGameEnd) {
         // Loading effects
         diceBackground.classList.add("hidden");
-        diceBackground.style.backgroundColor = "black";
         loaderRing.classList.remove("hidden");
-        // Logic Parts
+        // Dice rolling
+        const diceRoll = Math.floor(Math.random() * 6) + 1;
+        diceBackground.style.backgroundColor = "black";
+        diceFaceImg.src = `./media/dice-${diceRoll}.png`;
         setTimeout(() => {
-            // Dice rolling
-            const diceRoll = Math.floor(Math.random() * 6) + 1;
             // Load dice face
             loaderRing.classList.add("hidden");
             diceBackground.classList.remove("hidden");
-            diceFaceImg.src = `./media/dice-${diceRoll}.png`;
             // Set Score and update UI
             playersCurrentScore[playerActive] += diceRoll;
             document.querySelector(`.player-${playerActive}-current-score`).textContent = playersCurrentScore[playerActive];
